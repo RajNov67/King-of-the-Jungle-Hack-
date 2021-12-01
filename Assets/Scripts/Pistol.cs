@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class Pistol : MonoBehaviour
 {
@@ -13,10 +14,25 @@ public class Pistol : MonoBehaviour
     private float timeBtwShots;
     public float startTimeBtwShots;
 
-     void Update()
+    PhotonView View;
+
+    private void Start()
     {
-        faceMouse();
-        Shoot();
+        View = GetComponent<PhotonView>();
+    }
+
+    void Update()
+    {
+
+        if (View.IsMine)
+        {
+            faceMouse();
+            Shoot();
+        }
+
+
+        //faceMouse();
+        //Shoot();
     }
 
     void faceMouse()
@@ -45,7 +61,8 @@ public class Pistol : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0))
             {
-                Instantiate(projectile, shotPoint.position, transform.rotation);
+                //######
+                PhotonNetwork.Instantiate(projectile.name, shotPoint.position, transform.rotation);
             }
         }
         else

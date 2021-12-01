@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 1046117940976451039}
   - component: {fileID: 1046117940976451024}
   - component: {fileID: 1046117940976451025}
+  - component: {fileID: 1541454528364795459}
+  - component: {fileID: 1122082235195309226}
   m_Layer: 0
   m_Name: laser_red
   m_TagString: Untagged
@@ -99,6 +101,62 @@ MonoBehaviour:
   projectile: {fileID: 4863433370419684954, guid: a0384ddf6c8d30240aa2b7354001aba8, type: 3}
   shotPoint: {fileID: 1046117941874637246}
   startTimeBtwShots: 0
+--- !u!114 &1541454528364795459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1046117940976451038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents:
+  - {fileID: 1122082235195309226}
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!114 &1122082235195309226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1046117940976451038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8efc6b1d64977384eb3405357896c656, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PositionModel:
+    SynchronizeEnabled: 1
+    TeleportEnabled: 1
+    TeleportIfDistanceGreaterThan: 3
+    InterpolateOption: 2
+    InterpolateMoveTowardsSpeed: 1
+    InterpolateLerpSpeed: 1
+    ExtrapolateOption: 0
+    ExtrapolateSpeed: 1
+    ExtrapolateIncludingRoundTripTime: 1
+    ExtrapolateNumberOfStoredPositions: 1
+  m_RotationModel:
+    SynchronizeEnabled: 1
+    InterpolateOption: 1
+    InterpolateRotateTowardsSpeed: 180
+    InterpolateLerpSpeed: 5
+  m_ScaleModel:
+    SynchronizeEnabled: 0
+    InterpolateOption: 0
+    InterpolateMoveTowardsSpeed: 1
+    InterpolateLerpSpeed: 0
 --- !u!1 &1046117941874637245
 GameObject:
   m_ObjectHideFlags: 0
@@ -145,6 +203,7 @@ GameObject:
   - component: {fileID: 1046117942372033073}
   - component: {fileID: 6656935536565434129}
   - component: {fileID: -656397865118165166}
+  - component: {fileID: -569182456202846941}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -317,6 +376,7 @@ MonoBehaviour:
   observableSearch: 2
   ObservedComponents:
   - {fileID: -656397865118165166}
+  - {fileID: -569182456202846941}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -353,3 +413,30 @@ MonoBehaviour:
     InterpolateOption: 0
     InterpolateMoveTowardsSpeed: 1
     InterpolateLerpSpeed: 0
+--- !u!114 &-569182456202846941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1046117942372033083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b8c4a61274f60b4ea5fb4299cfdbf14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowLayerWeightsInspector: 1
+  ShowParameterInspector: 1
+  m_SynchronizeParameters:
+  - Type: 4
+    SynchronizeType: 0
+    Name: run
+  - Type: 4
+    SynchronizeType: 0
+    Name: grounded
+  - Type: 9
+    SynchronizeType: 0
+    Name: jump
+  m_SynchronizeLayers:
+  - SynchronizeType: 0
+    LayerIndex: 0

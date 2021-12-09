@@ -13,9 +13,16 @@ public class PlayerMovement : MonoBehaviour
 
     private Animator anim;
 
+    public int maxHealth = 100;
+    public int currentHealth;
+
+    public HealthBar healthBar;
+
     private void Start()
     {
         View = GetComponent<PhotonView>();
+        currentHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
     }
 
 

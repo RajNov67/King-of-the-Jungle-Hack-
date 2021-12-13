@@ -43,6 +43,11 @@ MonoBehaviour:
   - TakeDamage
   - UpdateHealthBar
   - Initialize
+  - RPC_EndGame
+  - RPC_TakeDamage
+  - RPC_EndGameWin
+  - RPC_checkWinLose
+  - RPC_endGame
   DisableAutoOpenWizard: 1
   ShowSettings: 0
   DevRegionSetOnce: 1
